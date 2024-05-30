@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&family=Jersey+15&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="startupscreen">
+        <img id="image" src="assest/background.png" alt="" />
+        <div class="samaan">
+          <h1>Bubble Game</h1>
+          <div id="picture"><img src="assest/Ahmad.png" alt="" /></div>
+          <button>Start Game</button>
+        </div>
+      </div>
+      <div id="panel">
+        <div id="panel-top">
+          <div class="record">
+            <h2>Pop</h2>
+            <div id="hit-value" class="box">0</div>
+          </div>
+          <div class="record">
+            <h2>Time Left</h2>
+            <div id="timer-value" class="box">60</div>
+          </div>
+          <div class="record">
+            <h2>Score</h2>
+            <div id="score" class="box">0</div>
+          </div>
+        </div>
+        <div id="panel-bottom"></div>
+      </div>
+     
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/logic.js"></script>
+  </body>
+</html>
