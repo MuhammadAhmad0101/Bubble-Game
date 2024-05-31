@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded",function(){
           outstanding.play();
           amazingvoiceplayed = true;
         }
+        
         if (time <= 11 && time > 0) {
           startMusic.volume = 0.2;
           timeleft.play();
