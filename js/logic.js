@@ -115,5 +115,4 @@ document.addEventListener("DOMContentLoaded",function(){
       wrong.play();
     }
   });
-  
 })
