@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
   let wrong = new Audio("assest/wrong.mp3");
   let outstanding = new Audio("assest/outstanding.mp3");
   let amazing = new Audio("assest/amazing.mp3");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded",function(){
   let backnmusic = new Audio("assest/startscreen.mp3");
   let gameover = new Audio("assest/gameover.mp3");
   let startupscreen = document.querySelector("#startupscreen");
-  
+
   startgame.addEventListener("click", function () {
     startupscreen.style.display = "none";
     startMusic.play();
@@ -25,11 +25,12 @@ document.addEventListener("DOMContentLoaded",function(){
   function makeBubble() {
     let copy = "";
     for (let i = 1; i <= 130 - 4; i++) {
-      copy = copy + `<div class="bubble">${Math.floor(Math.random() * 20)}</div>`;
+      copy =
+        copy + `<div class="bubble">${Math.floor(Math.random() * 20)}</div>`;
     }
     document.querySelector("#panel-bottom").innerHTML = copy;
   }
-  
+
   let randomNumber;
   function makenewHit() {
     randomNumber = Math.floor(Math.random() * 20);
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
       if (time > 0) {
         time--;
         timerSelected.textContent = time + " sec";
-  
+
         // Check if score has reached 10 and play the excellent voice only once
         if (score >= 100 && !excellentVoicePlayed) {
           hundredcrossed.play();
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded",function(){
           outstanding.play();
           amazingvoiceplayed = true;
         }
-        
+
         if (time <= 11 && time > 0) {
           startMusic.volume = 0.2;
           timeleft.play();
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded",function(){
         document.querySelector(
           "#panel-bottom"
         ).innerHTML = `<h1 id="yourscore">Your Score is <span id="scoredisplay"> ${score}</span></h1><h4 id="century"> You Need Some Practise 👽 </h4> <h5 id="timesup">Times Up ! ⏳ <br>Press <span id="f5">F5</span> to Try Again</h5>`;
-        
+
         if (score >= 100) {
           document.querySelector(
             "#panel-bottom"
@@ -115,4 +116,4 @@ document.addEventListener("DOMContentLoaded",function(){
       wrong.play();
     }
   });
-})
+});
